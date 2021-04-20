@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Leo Garcia Portfolio</title>
+   <link rel="preload" href="./normalize.css" as="style">
+   <link rel="stylesheet" href="./normalize.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+   <link rel="preload" href="./style.css" as="style">
+   <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="contenedor">
+			<nav class="header__nav">
+				<h2 class="header__logo">LEO GARCIA</h2>
+				<ul class="header__links-list">
+					<li><a href="#">About Me</a></li>
+					<li><a href="#">Projects</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+
+			<section class="header__hero">
+				<section class="header__intro">
+					<h1>Hi, I'm Leonardo.</h1>
+					<p>A Junior Front-End Developer from El Salvador <span class="flag"></span></p>
+					<a class="btn" href="#">My Projects</a>
+				</section>
+				<div class="header__personal">
+					<figure class="header__img-container">
+						<img class="header__img" src="./assets/img/foto.jpeg" alt="young man picture">
+					</figure>
+					<section class="header__personal-links">
+						<a href="https://github.com/leogarcialp" target="_blank" title="Github">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ABABAB" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								<path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+							</svg>
+						</a>
+						<a href="#" title="LinkedIn">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ABABAB" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								<rect x="4" y="4" width="16" height="16" rx="2" />
+								<line x1="8" y1="11" x2="8" y2="16" />
+								<line x1="8" y1="8" x2="8" y2="8.01" />
+								<line x1="12" y1="16" x2="12" y2="11" />
+								<path d="M16 16v-3a2 2 0 0 0 -4 0" />
+							</svg>
+						</a>
+						<a href="#" title="My email">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ABABAB" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								<rect x="3" y="5" width="18" height="14" rx="2" />
+								<polyline points="3 7 12 13 21 7" />
+							</svg>
+						</a>
+					</section> <!--header__personal-links-->
+				</div> <!--hero__personal-->
+			</section> <!--header__hero-->
+		</div> <!--contenedor-->
+   </header>
+
+	<section class="about">
+		<div class="contenedor">
+			<h2 class="about__title">ABOUT ME</h2>
+			<div class="about__content">
+				<div class="about__description">
+					<p>
+						Hello, I'm Leonardo García, a Junior Front-End Developer from El Salvador. Due to the 2020 pandemic, I could no longer continue in collegue, so I had to continue my learning not as a future Computer Science Engineer, but as a programmer.
+					</p>
+					<p>
+						In college, I saw a little introduction to the basics of web development, which caught my attention and I liked it. So in 2021 I set out to learn until I mastered it. My goal is to become a long-term Full Stack MERN developer and why not a React Native or Flutter developer.
+					</p>
+					<p>
+						I am currently building projects to show in my portfolio and keep learning new things. I am a Computer Technician, I like everything related to hardware. I like video games, rock music and sports, especially soccer. 
+					</p>
+				</div> <!--about__description-->
+				<div class="about__img-container">
+					<img src="./assets/img/hobbies.jpg" alt="person showing hobbies">
+				</div>
+			</div> <!--.about__content-->
+		</div>
+	</section>
+
+	<main class="main">
+		<h2 class="main__title">PROJECTS</h2>
+		<div class="contenedor">
+			<div class="main__project-container">
+				<div class="main__project"></div>
+				<div class="main__project"></div>
+				<div class="main__project"></div>
+				<div class="main__project"></div>
+				<div class="main__project"></div>
+				<div class="main__project"></div>
+			</div>
+		</div>
+	</main>
+
+	<section class="contact">
+		<h2 class="contact__title">CONTACT</h2>
+
+		<form class="contact__form">
+			<fieldset>
+				<legend>Contact me filling this form</legend>
+				<div>
+					<input class="contact__input" type="text" placeholder="Name">
+				</div>
+				<div>
+					<input class="contact__input" type="email" placeholder="Email">
+				</div>
+				<div>
+					<textarea placeholder="Write your message..."></textarea>	
+				</div>
+				<div class="flex-right">
+				<input class="contact__submit btn" type="submit" value="Send Message">
+				</div>
+			</fieldset>
+		</form>
+	</section>
+
+	<footer class="footer">
+		<p>&copy; 2021 Leonardo Garcia. All rights reserved.</p>
+	</footer>
+</body>
+</html>
