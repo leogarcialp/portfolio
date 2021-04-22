@@ -491,7 +491,6 @@ fieldset > div {
    color: white;
    text-align: center;
 }
-
 /* Year must be dynamic ↑ */
 
 @media (max-width: 768px) {
