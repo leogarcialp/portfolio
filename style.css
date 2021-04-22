@@ -4,6 +4,7 @@
    --neutral1: #83858C;
    --neutral2: #ABABAB;
    --neutral3: #FAFAFA;
+   --neutral4: #303134;
    --dark: #252934;
 }
 
@@ -59,9 +60,16 @@ h2 {
 /* -------------- */
 /* Desktop first */
 .contenedor {
-   max-width: 115rem; /*120*/
+   max-width: 90%; /*120-115*/
    margin: 0 auto;
 }
+
+@media (min-width: 1150px) {
+   .contenedor {
+      max-width: 115rem;
+   }   
+}
+
 
 /* HEADER */
 .header {
@@ -71,6 +79,7 @@ h2 {
 }
 
 .header__nav {
+   position: relative;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -104,6 +113,24 @@ h2 {
    color: white;
    transition: .3s;
 }
+
+/* toggle button - responsive navbar links */
+.header__toggle {
+   position: absolute;
+   right: 0;
+   display: none;
+   flex-direction: column;
+   cursor: pointer;
+}
+
+.header__toggle span {
+   width: 3rem;
+   height: .3rem;
+   margin-bottom: .5rem;
+   border-radius: 3rem;
+   background-color: white;
+}
+/* ------------------------------------*
 
 /* hero section */
 .header__hero {
@@ -186,7 +213,92 @@ svg:hover {
    transition: .3s;
 }
 
- 
+/* media queries HEADER ↓ */
+
+/* show links and hide toggle at 1024px */
+@media (max-width: 1024px) {
+   .header {
+      height: auto;
+   }
+   .header__links-container {
+      display: none;
+      width: 100%;
+      margin-top: 5rem;
+   }
+   .header__toggle {
+      display: flex;
+   } 
+   /* styling navbar & links when click ↓ */
+   .header__nav {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+   .header__links-container .header__links-list {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+   }
+   .header__links-list li {
+      margin-left: 0;
+      text-align: center;
+      border-bottom: 1px solid var(--neutral4);
+   }
+   .header__links-list li:active {
+      background-color: var(--neutral4);
+   }
+   .header__links-list li a {
+      display: block;
+      padding: 1.5rem;
+   }
+   /* I had to remove the BEM modifier for a dot */
+   .header__links-container.active {
+      display: flex;
+   } 
+
+   /** hero section* */
+   .header__hero {
+      display: grid;
+      grid-template-columns: 100%;
+   }
+   .header__intro {
+      text-align: center;
+   }
+   .header__intro a {
+      align-self: center;
+      width: 100%;
+   }
+   .header__intro a:active {
+      transform: scale(1.2);
+   }
+   /* photo and icons */
+   .header__personal {
+      position: relative;
+      margin-top: 3rem;
+      margin-bottom: 10rem;
+      align-items: center;
+   }
+   .header__img-container {
+      width: 30rem;
+      padding: 1rem;
+   }
+   .header__img {
+      margin-bottom: -3rem;
+   }
+   .header__personal-links {
+      position: absolute;
+      bottom: -7rem;
+      left: calc(50% - 8rem);
+   }
+   svg:active {
+      stroke: white;
+      transform: scale(1.5);
+      transition: 0;
+   }
+}
+
+
+
 /* ---------------- */
 /* ABOUT ME SECTION */
 .about {
