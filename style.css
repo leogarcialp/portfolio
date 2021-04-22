@@ -220,6 +220,9 @@ svg:hover {
    .header {
       height: auto;
    }
+   .header__logo {
+      font-size: 2rem;
+   }
    .header__links-container {
       display: none;
       width: 100%;
@@ -264,6 +267,9 @@ svg:hover {
    .header__intro {
       text-align: center;
    }
+   .header__intro p {
+      max-width: 66ch;
+   }
    .header__intro a {
       align-self: center;
       width: 100%;
@@ -271,7 +277,7 @@ svg:hover {
    .header__intro a:active {
       transform: scale(1.2);
    }
-   /* photo and icons */
+   /* photo and icons ↓ */
    .header__personal {
       position: relative;
       margin-top: 3rem;
@@ -324,8 +330,25 @@ svg:hover {
 }
 
 .about__description p {
-   max-width: 54rem;
+   max-width: 70rem;
 }
+
+/* about media queries */
+@media (max-width: 1024px) {
+   .about__content {
+      grid-template-columns: 100%;
+      margin: 3rem 0 3rem 0;
+      text-align: center;
+   }
+   .about__description {
+      font-size: 1.8rem;
+      margin: 0 auto;
+   }
+   .about__img-container {
+      display: none;
+   }
+}
+
 
 
 /* --------------- */
@@ -370,6 +393,26 @@ svg:hover {
 .main__project {
    width: 100%;
    height: 30rem;
+}
+
+/* main - projects Media Queries */
+@media (max-width: 768px) {
+   .main__project-container {
+      grid-template-columns: 100%;
+      margin-top: 5rem;
+   }
+   .main {
+      margin-bottom: 8rem;
+   }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+   .main__project-container {
+      grid-template-columns: 1fr 1fr;
+   }
+   .main {
+      margin-bottom: 8rem;
+   }
 }
 
 
@@ -431,6 +474,13 @@ fieldset > div {
    cursor: pointer;
 }
 
+/* contact Media Queries */
+@media (max-width: 768px) {
+   .contact__submit {
+    width: 100%
+   }
+}
+
 
 /* -------- */
 /* FOOTER */
@@ -443,3 +493,9 @@ fieldset > div {
 }
 
 /* Year must be dynamic ↑ */
+
+@media (max-width: 768px) {
+   .footer {
+      font-size: 1.2rem;
+   }
+}
