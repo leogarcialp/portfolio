@@ -5,12 +5,12 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Leo Garcia Portfolio</title>
-   <link rel="preload" href="./normalize.css" as="style">
-   <link rel="stylesheet" href="./normalize.css">
+   <link rel="preload" href="./css/normalize.css" as="style">
+   <link rel="stylesheet" href="./css/normalize.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
-   <link rel="preload" href="./style.css" as="style">
-   <link rel="stylesheet" href="./style.css">
+   <link rel="preload" href="./css/style.css" as="style">
+   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 	<header class="header">
@@ -34,7 +34,7 @@
 
 			<section class="header__hero">
 				<section class="header__intro">
-					<h1>Hi, I'm Leonardo.</h1>
+					<h1 class="header__name">Hi, I'm <span class="name">Leo</span><span class="typed"></span></h1>
 					<p>A Junior Front-End Developer from El Salvador <span class="flag"></span></p>
 					<a class="btn" href="#">My Projects</a>
 				</section>
@@ -134,6 +134,8 @@
 		<p>&copy; <span id="year"></span> Leonardo Garcia. All rights reserved.</p>
 	</footer>
 
-	<script src="./app.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+	<script src="./js/Typed-script.js"></script>
+	<script src="./js/Date-toggle.js"></script>
 </body>
 </html>

@@ -150,6 +150,13 @@ h2 {
    font-size: 5rem;
    letter-spacing: 0.1rem;
 }
+/* JS animation for name ↓ */
+.name {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 600;
+   font-style: normal;
+   color: #ff9999;
+}
 
 .header__intro p {
    max-width: 33rem;
@@ -162,7 +169,7 @@ h2 {
    display: inline-block;
    width: 5rem;
    height: 2.2rem;
-   background-image: url('./assets/img/sv-flag2.png');
+   background-image: url('../assets/img/sv-flag2.png');
    background-repeat: no-repeat;
    background-position: center;
    background-size: contain;
