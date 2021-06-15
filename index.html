@@ -20,9 +20,9 @@
 
 				<div class="header__links-container">
 					<ul class="header__links-list">
-						<li><a href="#">About Me</a></li>
-						<li><a href="#">Projects</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="#about-me">About Me</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#contact-me">Contact</a></li>
 					</ul>
 				</div>
 				<div class="header__toggle">
@@ -36,7 +36,7 @@
 				<section class="header__intro">
 					<h1 class="header__name">Hi, I'm <span id="name-short">Leo</span><span class="typed"></span></h1>
 					<p>A Junior Front-End Developer from El Salvador <span class="flag"></span></p>
-					<a class="btn" href="#">My Projects</a>
+					<a class="btn" href="#projects">My Projects</a>
 				</section>
 				<div class="header__personal">
 					<figure class="header__img-container">
@@ -49,7 +49,7 @@
 								<path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
 							</svg>
 						</a>
-						<a href="#" title="LinkedIn">
+						<a href="https://www.linkedin.com/in/leogarcialp" target="_blank" title="LinkedIn">
 							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ABABAB" fill="none" stroke-linecap="round" stroke-linejoin="round">
 								<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 								<rect x="4" y="4" width="16" height="16" rx="2" />
@@ -59,11 +59,14 @@
 								<path d="M16 16v-3a2 2 0 0 0 -4 0" />
 							</svg>
 						</a>
-						<a href="#" title="My email">
-							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ABABAB" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<a href="https://drive.google.com/file/d/1fUiMyYqpyRLzxfYduVW4YScpn24Tc86z/view?usp=sharing" target="_blank" title="My resume">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-text" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ABABAB" fill="none" stroke-linecap="round" stroke-linejoin="round">
 								<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-								<rect x="3" y="5" width="18" height="14" rx="2" />
-								<polyline points="3 7 12 13 21 7" />
+								<path d="M14 3v4a1 1 0 0 0 1 1h4" />
+								<path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+								<line x1="9" y1="9" x2="10" y2="9" />
+								<line x1="9" y1="13" x2="15" y2="13" />
+								<line x1="9" y1="17" x2="15" y2="17" />
 							</svg>
 						</a>
 					</section> <!--header__personal-links-->
@@ -72,7 +75,7 @@
 		</div> <!--contenedor-->
    </header>
 
-	<section class="about">
+	<section class="about" id="about-me">
 		<div class="contenedor">
 			<h2 class="about__title">ABOUT ME</h2>
 			<div class="about__content">
@@ -94,7 +97,7 @@
 		</div>
 	</section>
 
-	<main class="main">
+	<main class="main" id="projects">
 		<h2 class="main__title">PROJECTS</h2>
 		<div class="contenedor">
 			<div class="main__project-container">
@@ -108,7 +111,7 @@
 		</div>
 	</main>
 
-	<section class="contact">
+	<section class="contact" id="contact-me">
 		<h2 class="contact__title">CONTACT</h2>
 
 		<form class="contact__form">

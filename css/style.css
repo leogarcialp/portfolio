@@ -375,7 +375,7 @@ svg:hover {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    grid-template-rows: auto auto auto;
-   margin-top: 10rem;
+   margin: 10rem 0 10rem 0;
 }
 
 .main__project-container > div:nth-child(1) {
