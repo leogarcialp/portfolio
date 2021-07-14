@@ -404,20 +404,26 @@ svg:hover {
 .main__project-img {
    height: 60%;
    background-color: violet;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 
 /* projects background images */
 .main__project-img--portfolio {
    background-image: url('../assets/img/portfolio.jpeg');
-   background-repeat: no-repeat;
-   background-size: cover;
+}
+
+.main__project-img--menu-sv {
+   background-image: url('../assets/img/menu-sv.jpeg');
 }
 
 .main__project-header-title {
+   font-size: 2rem;
    color: var(--primary);
 }
 
 .main__project-body {
+   font-size: 1.5rem;
    color: var(--neutral1);
 }
 
