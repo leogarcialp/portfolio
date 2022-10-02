@@ -321,6 +321,12 @@ svg:hover {
    }
 }
 
+@media (min-height: 900px) {
+   .header__hero {
+      margin-top: 18rem;
+   }
+}
+
 
 
 /* ---------------- */
