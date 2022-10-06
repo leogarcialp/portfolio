@@ -557,3 +557,22 @@ fieldset > div {
       font-size: 1.2rem;
    }
 }
+
+/* scrollBTn arrow */
+.top-link {
+   position: fixed;
+   bottom: 3rem;
+   right: 3rem;
+   display: grid;
+   place-items: center;
+   width: 5rem;
+   height: 5rem;
+   border-radius: 2rem;
+   background: var(--secondary);
+   animation: bounce 2s ease-in-out infinite;
+}
+
+.show-link {
+   visibility: visible;
+   z-index: 100;
+}
