@@ -570,6 +570,7 @@ fieldset > div {
    border-radius: 2rem;
    background: var(--secondary);
    animation: bounce 2s ease-in-out infinite;
+
    visibility: hidden;
    z-index: -100;
 }
@@ -582,4 +583,16 @@ fieldset > div {
 .show-link {
    visibility: visible;
    z-index: 100;
+}
+
+@keyframes bounce {
+   0% {
+     transform: scale(1);
+   }
+   50% {
+     transform: scale(1.5);
+   }
+   100% {
+     transform: scale(1);
+   }
 }
