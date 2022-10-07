@@ -570,6 +570,13 @@ fieldset > div {
    border-radius: 2rem;
    background: var(--secondary);
    animation: bounce 2s ease-in-out infinite;
+   visibility: hidden;
+   z-index: -100;
+}
+
+.top-link:hover {
+   transform: scale(1.1);
+   transition: .3s;
 }
 
 .show-link {
