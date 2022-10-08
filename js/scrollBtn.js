@@ -4,7 +4,6 @@ const scrollCount = document.querySelector('#home');
 
 window.addEventListener('scroll', () => {
    const location = scrollCount.getBoundingClientRect();
-   console.log(location);
 
    if(location.top < -800){
      scrollBtn.classList.add('show-link');
