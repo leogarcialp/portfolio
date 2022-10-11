@@ -415,6 +415,21 @@ svg:hover {
    background-size: cover;
 }
 
+.main__project-img:hover {
+   opacity: 0.7;
+}
+
+/* Modal &  btn style */
+.open-modal {
+   opacity: 0;
+   font-size: 1.2rem;
+   background-color: #ff9999;
+}
+
+.open-modal:hover {
+   opacity: 1;
+}
+
 /* projects background images */
 .main__project-img--portfolio {
    background-image: url('../assets/img/portfolio.jpeg');
