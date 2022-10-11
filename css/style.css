@@ -409,6 +409,7 @@ svg:hover {
 }
 
 .main__project-img {
+   position: relative;
    height: 60%;
    background-color: violet;
    background-repeat: no-repeat;
@@ -416,19 +417,25 @@ svg:hover {
 }
 
 .main__project-img:hover {
-   opacity: 0.7;
+   opacity: 0.8;
 }
+
 
 /* Modal &  btn style */
 .open-modal {
-   opacity: 0;
-   font-size: 1.2rem;
+   position: absolute;
+   top: 50%;
+   left: 32%;
+   display: none;
    background-color: #ff9999;
+   box-shadow: 0 0 2rem 0;
 }
 
-.open-modal:hover {
-   opacity: 1;
+.main__project-img:hover .open-modal {
+   display: block;
+   cursor: pointer;
 }
+
 
 /* projects background images */
 .main__project-img--portfolio {
