@@ -10,3 +10,15 @@ Existing files need to be modified
 when you click the img of the project
 */
 
+const modal = document.querySelector('.modal-overlay');
+const openModal = document.querySelector('.open-modal');
+const closeModal = document.querySelector('.close-modal');
+
+openModal.addEventListener('click', () => {
+   modal.classList.add('open-modal');
+});
+
+
+closeModal.addEventListener('click', () => {
+   modal.classList.remove('open-modal');
+});
