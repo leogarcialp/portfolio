@@ -495,6 +495,7 @@ svg:hover {
    border-radius: var(--radius);
    width: 70vw;
    height: 50vh;
+   padding: 3rem;
    /* max-width: var(--fixed-width); */
    text-align: center;
    display: grid;
@@ -502,10 +503,22 @@ svg:hover {
    position: relative;
 }
 
+.modal-body {
+   color: var(--primary);
+}
+
+.close-modal {
+   color: var(--neutral3);
+}
+
  /* OPEN/CLOSE MODAL */
 .open-modal {
    visibility: visible;
    z-index: 10;
+}
+
+.close-modal:hover {
+   cursor: pointer;
 }
 
 
