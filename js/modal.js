@@ -51,28 +51,50 @@ const info = [
 
 
 const modal = document.querySelector('.modal-overlay');
-const openModal = document.querySelector('.open-modal');
+// const openModal = document.querySelector('.open-modal');
 const closeModal = document.querySelector('.close-modal');
 
 // Events
-openModal.addEventListener('click', (e) => {
-   modal.classList.add('open-modal');
+const openModal = document.querySelectorAll('.open-modal');
 
-   if(e.target.dataset.id === info.id) {
-      document.createElement = `
-      <div class="modal-overlay"> 
-         <div class="modal-container">
-            <header>
-               <h2>${info.title}</h2>
-            </header>
-            <div class="modal-body">
-               ${info.desc}
+openModal.forEach((element) => {
+   element.addEventListener('click', (e) => {
+      if(e.target.dataset.id === info.id) {
+         document.createElement = `
+         <div class="modal-overlay"> 
+            <div class="modal-container">
+               <header>
+                  <h2>${info.title}</h2>
+               </header>
+               <div class="modal-body">
+                  ${info.desc}
+               </div>
+                  <button class="btn-project close-modal">close modal</button>
             </div>
-            <button class="btn-project close-modal">close modal</button>
-         </div>
-      </div>`;
-   }
+         </div>`;
+      }
+   });
 });
+
+// -----------------------------------------------------------------
+// openModal.addEventListener('click', (e) => {
+//    modal.classList.add('open-modal');
+
+//    if(e.target.dataset.id === info.id) {
+//       document.createElement = `
+//       <div class="modal-overlay"> 
+//          <div class="modal-container">
+//             <header>
+//                <h2>${info.title}</h2>
+//             </header>
+//             <div class="modal-body">
+//                ${info.desc}
+//             </div>
+//             <button class="btn-project close-modal">close modal</button>
+//          </div>
+//       </div>`;
+//    }
+// });
 
 
 closeModal.addEventListener('click', () => {
