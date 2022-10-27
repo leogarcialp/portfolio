@@ -1,13 +1,7 @@
-/* TODO: create an object with the description of projects 
-similar to the Reviews project.
-Existing files need to be modified
-
--All HTML and info will be generated with JS.
-
--include: ID, img, Title, Web stack used, description.
-
--The modal should open and show the description
-when you click the img of the project
+/* 
+The modal should open and show the description of every project
+when you click the description button of the project
+- Data must be taken from info object
 */
 
 // data projects
@@ -51,32 +45,43 @@ const info = [
 
 
 const modal = document.querySelector('.modal-overlay');
-// const openModal = document.querySelector('.open-modal');
+const openModal = document.querySelector('.open-modal');
 const closeModal = document.querySelector('.close-modal');
 
-// Events
-window.addEventListener('DOMContentLoaded', () => {
-   displayModalInfo(info);
+// const mainProject = document.querySelector('main__project');
+
+openModal.addEventListener('click', () => {
+   modal.classList.add('open-modal');
 });
 
-// Function
-function displayModalInfo(modalInfo) {
-   let displayModal = modalInfo.map((item) => {
-      return `<div class="modal-overlay"> 
-         <div class="modal-container">
-            <header>
-               <h2>${info.title}</h2>
-            </header>
-            <div class="modal-body">
-               ${info.desc}
-            </div>
-               <button class="btn-project close-modal">close modal</button>
-         </div>
-      </div>`;
-   });
+closeModal.addEventListener('click', () => {
+   modal.classList.remove('open-modal');
+});
 
-   displayModal = displayModal.join("");
-}
+// Events to make it dynamic
+// window.addEventListener('DOMContentLoaded', () => {
+//    displayModalInfo(info);
+// });
+
+// Function
+// function displayModalInfo(modalInfo) {
+//    let displayModal = modalInfo.map((item) => {
+//       return `<div class="modal-overlay"> 
+//          <div class="modal-container">
+//             <header>
+//                <h2>${info.title}</h2>
+//             </header>
+//             <div class="modal-body">
+//                ${info.desc}
+//             </div>
+//                <button class="btn-project close-modal">close modal</button>
+//          </div>
+//       </div>`;
+//    });
+
+//    displayModal = displayModal.join("");
+//    mainProject.innerHTML(displayModal); 
+// }
 
 
       //   ------------------- TEST --------------------------
@@ -120,8 +125,3 @@ function displayModalInfo(modalInfo) {
 //       </div>`;
 //    }
 // });
-
-
-closeModal.addEventListener('click', () => {
-   modal.classList.remove('open-modal');
-});
