@@ -45,18 +45,38 @@ const info = [
 
 
 const modal = document.querySelector('.modal-overlay');
-const openModal = document.querySelector('.open-modal');
+// const openModal = document.querySelector('.open-modal');
+const openModal = document.querySelectorAll('.open-modal');
 const closeModal = document.querySelector('.close-modal');
 
 // const mainProject = document.querySelector('main__project');
 
-openModal.addEventListener('click', () => {
-   modal.classList.add('open-modal');
+// openModal.addEventListener('click', () => {
+//    modal.classList.add('open-modal');
+// });
+
+// closeModal.addEventListener('click', () => {
+//    modal.classList.remove('open-modal');
+// });
+
+
+// Testing event target
+openModal.forEach((element) => {
+   element.addEventListener('click', (e) => {
+      console.log(e.target);
+   });
 });
 
-closeModal.addEventListener('click', () => {
-   modal.classList.remove('open-modal');
-});
+
+
+
+
+
+
+
+
+
+// ------------------------------------------
 
 // Events to make it dynamic
 // window.addEventListener('DOMContentLoaded', () => {
