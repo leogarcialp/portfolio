@@ -60,88 +60,21 @@ const closeModal = document.querySelector('.close-modal');
 // });
 
 
+
+
 // Testing event target
 openModal.forEach((element) => {
    element.addEventListener('click', (e) => {
       console.log(e.target);
+      const modalCurrent = e.currentTarget.dataset.id;
+      console.log(modalCurrent);
+
+      const modalnfo = info.filter( (modalItem) => {
+         if(modalItem.id === modalCurrent) {
+            // return modalItem;
+            modal.classList.add('open-modal');
+         }
+      });
+
    });
 });
-
-
-
-
-
-
-
-
-
-
-// ------------------------------------------
-
-// Events to make it dynamic
-// window.addEventListener('DOMContentLoaded', () => {
-//    displayModalInfo(info);
-// });
-
-// Function
-// function displayModalInfo(modalInfo) {
-//    let displayModal = modalInfo.map((item) => {
-//       return `<div class="modal-overlay"> 
-//          <div class="modal-container">
-//             <header>
-//                <h2>${info.title}</h2>
-//             </header>
-//             <div class="modal-body">
-//                ${info.desc}
-//             </div>
-//                <button class="btn-project close-modal">close modal</button>
-//          </div>
-//       </div>`;
-//    });
-
-//    displayModal = displayModal.join("");
-//    mainProject.innerHTML(displayModal); 
-// }
-
-
-      //   ------------------- TEST --------------------------
-// const openModal = document.querySelectorAll('.open-modal');
-
-// openModal.forEach((element) => {
-//    element.addEventListener('click', (e) => {
-//       if(e.target.dataset.id === info.id) {
-//          document.createElement = `
-//          <div class="modal-overlay"> 
-//             <div class="modal-container">
-//                <header>
-//                   <h2>${info.title}</h2>
-//                </header>
-//                <div class="modal-body">
-//                   ${info.desc}
-//                </div>
-//                   <button class="btn-project close-modal">close modal</button>
-//             </div>
-//          </div>`;
-//       }
-//    });
-// });
-
-// ----------------------------------------------------------------- ORIGINAL
-// openModal.addEventListener('click', (e) => {
-//    modal.classList.add('open-modal');
-
-//    if(e.target.dataset.id === info.id) {
-//       document.createElement = `
-//       <div class="modal-overlay"> 
-//          <div class="modal-container">
-//             <header>
-//                <h2>${info.title}</h2>
-//             </header>
-//             <div class="modal-body">
-//                ${info.desc}
-//             </div>
-//             <button class="btn-project close-modal">close modal</button>
-//          </div>
-//       </div>`;
-//    }
-// });
