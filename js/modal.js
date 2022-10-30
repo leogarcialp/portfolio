@@ -55,26 +55,30 @@ const closeModal = document.querySelector('.close-modal');
 //    modal.classList.add('open-modal');
 // });
 
-// closeModal.addEventListener('click', () => {
-//    modal.classList.remove('open-modal');
-// });
+closeModal.addEventListener('click', () => {
+   modal.classList.remove('open-modal');
+});
 
-
-
-
-// Testing event target
 openModal.forEach((element) => {
    element.addEventListener('click', (e) => {
       console.log(e.target);
-      const modalCurrent = e.currentTarget.dataset.id;
-      console.log(modalCurrent);
-
-      const modalnfo = info.filter( (modalItem) => {
-         if(modalItem.id === modalCurrent) {
-            // return modalItem;
-            modal.classList.add('open-modal');
-         }
-      });
-
+      modal.classList.add('open-modal');
    });
 });
+
+// Testing event target
+// openModal.forEach((element) => {
+//    element.addEventListener('click', (e) => {
+//       console.log(e.target);
+//       const modalCurrent = e.currentTarget.dataset.id;
+//       console.log(modalCurrent);
+
+//       const modalnfo = info.filter( (modalItem) => {
+//          if(modalItem.id === modalCurrent) {
+//             // return modalItem;
+//             modal.classList.add('open-modal');
+//          }
+//       });
+
+//    });
+// });
