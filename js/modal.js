@@ -2,6 +2,9 @@
 The modal should open and show the description of every project
 when you click the description button of the project
 - Data must be taken from info object
+
+--
+
 */
 
 // data projects
@@ -59,10 +62,11 @@ closeModal.addEventListener('click', () => {
    modal.classList.remove('open-modal');
 });
 
-openModal.forEach((element) => {
+openModal.forEach((element, index) => {
    element.addEventListener('click', (e) => {
-      console.log(e.target);
       modal.classList.add('open-modal');
+
+      console.log(`${e.target} = ${index}`);
    });
 });
 
