@@ -52,10 +52,55 @@ const openModal = document.querySelectorAll('.open-modal');
 const closeModal = document.querySelector('.close-modal');
 
 
-closeModal.addEventListener('click', () => {
-   modal.classList.remove('open-modal');
-});
+// loop array of info
+for(let i = 0; i < info.length; i++) {
+   let currentItem = info[i];
 
+   // display array info
+   let infoProject = document.createElement('div');
+   infoProject.classList.add('main__project');
+
+   infoProject.innerHTML = `<div class="main__project-img main__project-img--portfolio">
+         <button class="btn-project open-modal" data-id="1">View description</button>
+   </div>
+   <div class="main__project-info">
+      <div class="main__project-header">
+         <h2 class="main__project-header-title">${currentItem.title}</h2>
+      </div>
+      <div class="main__project-body">
+         <p>HTML - CSS - JavaScript</p>
+      </div>
+      <div class="main__project-footer">
+         <button class="btn-project">
+            <a class="btn-project__link" href="https://github.com/leogarcialp/portfolio" target="_blank">Github</a>
+         </button>
+         <button class="btn-project">
+            <a class="btn-project__link" href="https://portfolio-leogarcialp.vercel.app/" target="_blank">Demo</a>
+         </button>
+      </div>
+   </div> <!--.main__project-info-->
+   
+   <div class="modal-overlay"> 
+      <div class="modal-container">
+         <header>
+            <h2>${currentItem.title}</h2>
+         </header>
+         <div class="modal-body">
+         ${currentItem.desc}
+         </div>
+         <button class="btn-project close-modal">close modal</button>
+      </div>
+   </div> <!--modal-->`
+   ;
+
+   // Add Projects to the DOM
+   let projectContainer = document.querySelector('.main__project-container');
+
+   projectContainer.appendChild(infoProject);
+}
+
+
+// Modal open and close
 openModal.forEach((element, index) => {
    element.addEventListener('click', (e) => {
       modal.classList.add('open-modal');
@@ -64,3 +109,6 @@ openModal.forEach((element, index) => {
    });
 });
 
+closeModal.addEventListener('click', () => {
+   modal.classList.remove('open-modal');
+});
