@@ -48,15 +48,9 @@ const info = [
 
 
 const modal = document.querySelector('.modal-overlay');
-// const openModal = document.querySelector('.open-modal');
 const openModal = document.querySelectorAll('.open-modal');
 const closeModal = document.querySelector('.close-modal');
 
-// const mainProject = document.querySelector('main__project');
-
-// openModal.addEventListener('click', () => {
-//    modal.classList.add('open-modal');
-// });
 
 closeModal.addEventListener('click', () => {
    modal.classList.remove('open-modal');
@@ -70,19 +64,3 @@ openModal.forEach((element, index) => {
    });
 });
 
-// Testing event target
-// openModal.forEach((element) => {
-//    element.addEventListener('click', (e) => {
-//       console.log(e.target);
-//       const modalCurrent = e.currentTarget.dataset.id;
-//       console.log(modalCurrent);
-
-//       const modalnfo = info.filter( (modalItem) => {
-//          if(modalItem.id === modalCurrent) {
-//             // return modalItem;
-//             modal.classList.add('open-modal');
-//          }
-//       });
-
-//    });
-// });
