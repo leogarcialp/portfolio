@@ -2,9 +2,6 @@
 The modal should open and show the description of every project
 when you click the description button of the project
 - Data must be taken from info object
-
---
-
 */
 
 // data projects
