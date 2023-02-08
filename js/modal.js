@@ -63,7 +63,7 @@ for(let i = 0; i < info.length; i++) {
    let infoProject = document.createElement('div');
    infoProject.classList.add('main__project');
 
-   infoProject.innerHTML = `<div class="main__project-img main__project-img--portfolio">
+   infoProject.innerHTML = `<div class="main__project-img ${currentItem.img}">
          <button class="btn-project open-modal" data-id="1">View description</button>
    </div>
    <div class="main__project-info">
