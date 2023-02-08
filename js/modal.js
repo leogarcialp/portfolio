@@ -11,6 +11,9 @@ const info = [
       img: 'main__project-img--portfolio',
       title: 'Portfolio',
       desc: 'My portfolio made from scratch using HTML5, CSS3 and JavaScript. My first big project.',
+      techUsed: 'HTML - CSS - JavaScript',
+      projectCode: 'https://github.com/leogarcialp/portfolio',
+      projectDemo: 'https://portfolio-leogarcialp.vercel.app/',
    },
 
    {
@@ -18,6 +21,9 @@ const info = [
       img: 'main__project-img--menu-sv',
       title: 'Tipical Food Menu',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
+      techUsed: 'HTML - CSS - JavaScript',
+      projectCode: 'https://github.com/leogarcialp/menu-sv',
+      projectDemo: 'https://menu-sv.vercel.app/',
    },
 
    {
@@ -25,6 +31,9 @@ const info = [
       img: 'main__project-img--temporal',
       title: 'Weather App',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
+      techUsed: 'HTML - CSS - JavaScript - Weather API',
+      projectCode: '#',
+      projectDemo: '#',
    },
 
    {
@@ -32,6 +41,9 @@ const info = [
       img: 'main__project-img--temporal',
       title: 'React JS Project',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
+      techUsed: 'HTML - CSS - Tailwind - React JS',
+      projectCode: '#',
+      projectDemo: '#',
    },
 
    {
@@ -39,6 +51,9 @@ const info = [
       img: 'main__project-img--temporal',
       title: 'Full Stack Project',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
+      techUsed: 'HTML - CSS - Tailwind - React JS - Node JS',
+      projectCode: '#',
+      projectDemo: '#',
    },
 
    {
@@ -46,6 +61,9 @@ const info = [
       img: 'main__project-img--temporal',
       title: 'El Salvador culture website',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
+      techUsed: 'idk yet',
+      projectCode: '#',
+      projectDemo: '#',
    },
 ];
 
@@ -71,14 +89,14 @@ for(let i = 0; i < info.length; i++) {
          <h2 class="main__project-header-title">${currentItem.title}</h2>
       </div>
       <div class="main__project-body">
-         <p>HTML - CSS - JavaScript</p>
+         <p>${currentItem.techUsed}</p>
       </div>
       <div class="main__project-footer">
          <button class="btn-project">
-            <a class="btn-project__link" href="https://github.com/leogarcialp/portfolio" target="_blank">Github</a>
+            <a class="btn-project__link" href="${currentItem.projectCode}" target="_blank">Github</a>
          </button>
          <button class="btn-project">
-            <a class="btn-project__link" href="https://portfolio-leogarcialp.vercel.app/" target="_blank">Demo</a>
+            <a class="btn-project__link" href="${currentItem.projectDemo}" target="_blank">Demo</a>
          </button>
       </div>
    </div> <!--.main__project-info-->
