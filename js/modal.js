@@ -8,36 +8,42 @@ when you click the description button of the project
 const info = [
    {
       id: 1, 
+      img: 'main__project-img--portfolio',
       title: 'Portfolio',
       desc: 'My portfolio made from scratch using HTML5, CSS3 and JavaScript. My first big project.',
    },
 
    {
       id: 2, 
+      img: 'main__project-img--menu-sv',
       title: 'Tipical Food Menu',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
    },
 
    {
       id: 3, 
+      img: 'main__project-img--temporal',
       title: 'Weather App',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
    },
 
    {
       id: 4, 
+      img: 'main__project-img--temporal',
       title: 'React JS Project',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
    },
 
    {
       id: 5, 
+      img: 'main__project-img--temporal',
       title: 'Full Stack Project',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
    },
 
    {
       id: 6, 
+      img: 'main__project-img--temporal',
       title: 'El Salvador culture website',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
    },
