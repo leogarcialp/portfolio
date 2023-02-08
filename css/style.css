@@ -446,6 +446,11 @@ svg:hover {
    background-image: url('../assets/img/menu-sv.jpeg');
 }
 
+/* Temporal background image */
+.main__project-img--temporal {
+   background-image: url('../assets/img/temporal-image.jpg');
+}
+
 .main__project-header-title {
    font-size: 2rem;
    color: var(--primary);
