@@ -4,10 +4,9 @@ when you click the description button of the project
 - Data must be taken from info object
 */
 
-// data projects
+// projects data
 const info = [
    {
-      id: 1, 
       img: 'main__project-img--portfolio',
       title: 'Portfolio',
       desc: 'My portfolio made from scratch using HTML5, CSS3 and JavaScript. My first big project.',
@@ -17,7 +16,6 @@ const info = [
    },
 
    {
-      id: 2, 
       img: 'main__project-img--menu-sv',
       title: 'Tipical Food Menu',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
@@ -27,7 +25,6 @@ const info = [
    },
 
    {
-      id: 3, 
       img: 'main__project-img--temporal',
       title: 'Weather App',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
@@ -37,7 +34,6 @@ const info = [
    },
 
    {
-      id: 4, 
       img: 'main__project-img--temporal',
       title: 'React JS Project',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
@@ -47,7 +43,6 @@ const info = [
    },
 
    {
-      id: 5, 
       img: 'main__project-img--temporal',
       title: 'Full Stack Project',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
@@ -57,7 +52,6 @@ const info = [
    },
 
    {
-      id: 6, 
       img: 'main__project-img--temporal',
       title: 'El Salvador culture website',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
@@ -66,11 +60,6 @@ const info = [
       projectDemo: '#',
    },
 ];
-
-
-const modal = document.querySelector('.modal-overlay');
-const openModal = document.querySelectorAll('.open-modal');
-const closeModal = document.querySelector('.close-modal');
 
 
 // loop array of info
@@ -121,15 +110,17 @@ for(let i = 0; i < info.length; i++) {
 }
 
 
-// Modal open and close
+// Open and close modal
+const modal = document.querySelector('.modal-overlay');
+const openModal = document.querySelectorAll('.open-modal');
+const closeModal = document.querySelector('.close-modal');
+
 openModal.forEach((element, index) => {
    element.addEventListener('click', (e) => {
       modal.classList.add('open-modal');
-
-      console.log(`${e.target} = ${index}`);
-   });
+   });   
 });
 
 closeModal.addEventListener('click', () => {
-   modal.classList.remove('open-modal');
+   modal.classList.remove('open-modal'); 
 });
