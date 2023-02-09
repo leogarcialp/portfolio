@@ -7,6 +7,7 @@ when you click the description button of the project
 // projects data
 const info = [
    {
+      id: 1,
       img: 'main__project-img--portfolio',
       title: 'Portfolio',
       desc: 'My portfolio made from scratch using HTML5, CSS3 and JavaScript. My first big project.',
@@ -16,6 +17,7 @@ const info = [
    },
 
    {
+      id: 2,
       img: 'main__project-img--menu-sv',
       title: 'Tipical Food Menu',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
@@ -25,6 +27,7 @@ const info = [
    },
 
    {
+      id: 3,
       img: 'main__project-img--temporal',
       title: 'Weather App',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
@@ -34,6 +37,7 @@ const info = [
    },
 
    {
+      id: 4,
       img: 'main__project-img--temporal',
       title: 'React JS Project',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
@@ -43,6 +47,7 @@ const info = [
    },
 
    {
+      id: 5,
       img: 'main__project-img--temporal',
       title: 'Full Stack Project',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
@@ -52,6 +57,7 @@ const info = [
    },
 
    {
+      id: 6,
       img: 'main__project-img--temporal',
       title: 'El Salvador culture website',
       desc: 'Order of three. The best known typical dish. A rice or corn flour tortilla filled with beans, cheese and/or chicharrón. Accompanied by "curtido" and tomato sauce.',
@@ -71,7 +77,7 @@ for(let i = 0; i < info.length; i++) {
    infoProject.classList.add('main__project');
 
    infoProject.innerHTML = `<div class="main__project-img ${currentItem.img}">
-         <button class="btn-project open-modal" data-id="1">View description</button>
+         <button class="btn-project open-modal ${currentItem.id}">View description</button>
    </div>
    <div class="main__project-info">
       <div class="main__project-header">
@@ -89,7 +95,7 @@ for(let i = 0; i < info.length; i++) {
          </button>
       </div>
    </div> <!--.main__project-info-->
-   
+    
    <div class="modal-overlay"> 
       <div class="modal-container">
          <header>
@@ -97,6 +103,7 @@ for(let i = 0; i < info.length; i++) {
          </header>
          <div class="modal-body">
          ${currentItem.desc}
+         <p>${currentItem.id}</p>  
          </div>
          <button class="btn-project close-modal">close modal</button>
       </div>
@@ -105,22 +112,24 @@ for(let i = 0; i < info.length; i++) {
 
    // Add Projects to the DOM
    let projectContainer = document.querySelector('.main__project-container');
-
    projectContainer.appendChild(infoProject);
 }
 
 
 // Open and close modal
 const modal = document.querySelector('.modal-overlay');
-const openModal = document.querySelectorAll('.open-modal');
-const closeModal = document.querySelector('.close-modal');
+const openModalBtn = document.querySelectorAll('.open-modal'); //selectorAll
+const closeModalBtn = document.querySelector('.close-modal');
 
-openModal.forEach((element, index) => {
+
+openModalBtn.forEach((element, index) => {
    element.addEventListener('click', (e) => {
       modal.classList.add('open-modal');
+      // const modal = document.querySelector(`.modal-overlay-${index}`);
+      console.log(e.currentTarget);
    });   
 });
 
-closeModal.addEventListener('click', () => {
+closeModalBtn.addEventListener('click', () => {
    modal.classList.remove('open-modal'); 
 });
