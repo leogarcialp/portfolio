@@ -77,7 +77,7 @@ for(let i = 0; i < info.length; i++) {
    infoProject.classList.add('main__project');
 
    infoProject.innerHTML = `<div class="main__project-img ${currentItem.img}">
-         <button class="btn-project open-modal ${currentItem.id}">View description</button>
+         <button class="btn-project open-modal-btn ${currentItem.id}">View description</button>
    </div>
    <div class="main__project-info">
       <div class="main__project-header">
@@ -118,18 +118,18 @@ for(let i = 0; i < info.length; i++) {
 
 // Open and close modal
 const modal = document.querySelector('.modal-overlay');
-const openModalBtn = document.querySelectorAll('.open-modal'); //selectorAll
+const openModalBtn = document.querySelectorAll('.open-modal-btn'); //selectorAll
 const closeModalBtn = document.querySelector('.close-modal');
 
 
 openModalBtn.forEach((element, index) => {
    element.addEventListener('click', (e) => {
-      modal.classList.add('open-modal');
+      modal.classList.add('modal');
       // const modal = document.querySelector(`.modal-overlay-${index}`);
       console.log(e.currentTarget);
    });   
 });
 
 closeModalBtn.addEventListener('click', () => {
-   modal.classList.remove('open-modal'); 
+   modal.classList.remove('modal'); 
 });

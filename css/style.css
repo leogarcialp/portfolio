@@ -422,7 +422,7 @@ svg:hover {
 
 
 /* Modal &  btn style */
-.open-modal {
+.open-modal-btn {
    position: absolute;
    top: 50%;
    left: 32%;
@@ -431,7 +431,7 @@ svg:hover {
    box-shadow: 0 0 2rem 0;
 }
 
-.main__project-img:hover .open-modal {
+.main__project-img:hover .open-modal-btn {
    display: block;
    cursor: pointer;
 }
@@ -517,7 +517,7 @@ svg:hover {
 }
 
  /* OPEN/CLOSE MODAL */
-.open-modal {
+.modal {
    visibility: visible;
    z-index: 10;
 }
