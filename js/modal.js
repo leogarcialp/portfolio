@@ -103,7 +103,6 @@ for(let i = 0; i < info.length; i++) {
          </header>
          <div class="modal-body">
          ${currentItem.desc}
-         <p>${currentItem.id}</p>  
          </div>
          <button class="btn-project close-modal">close modal</button>
       </div>
