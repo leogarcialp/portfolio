@@ -10,7 +10,7 @@ document.querySelector('.contact__form').addEventListener('submit', function(eve
 
    emailjs.sendForm(serviceID, templateID, this)
    .then(() => {
-         btn.value = 'Send Email';
+         btn.value = 'Send Message';
          alert('Email Sent!');
       }, (err) => {
          btn.value = 'Send Message';
