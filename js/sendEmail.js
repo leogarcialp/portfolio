@@ -18,3 +18,15 @@ document.querySelector('.contact__form').addEventListener('submit', function(eve
       }
    );
 });
+
+
+/*TODO: 
+- install Tailwind
+- Disable send message button ❌
+- validate the form fields
+- Enable send message button ✅
+- hardest part would be showing the error messages below the form (I have to
+   create and design new CSS elements 💡👀)
+- Clean/reset fields when message sent  
+
+*/
