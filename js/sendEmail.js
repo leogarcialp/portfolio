@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if(e.target.id === 'email' && !validateEmail(e.target.value)) {
-         mostrarAlerta('the email is not valid', e.target.parentElement);
+         showAlert('The email is not valid', e.target.parentElement);
          return;
       }
 
@@ -78,18 +78,20 @@ document.addEventListener('DOMContentLoaded', () => {
    }
 
    function showAlert(message, reference) {
+      removeAlert(reference);
+
       // Generate alert
       const error = document.createElement('P');
       error.textContent = message;
-      // error.classList.add('');
+      error.classList.add('bg-alert', 'p-alert', 'text-center-alert');
 
       // Show created element in the HTML
       reference.appendChild(error);
    }
 
    function removeAlert(reference) {
-      // Comprueba si ya existe una alerta
-      const alert = reference.querySelector('.bg-red-600'); //add a list a reference
+      // Check if an alert already exists
+      const alert = reference.querySelector('.bg-alert'); //take a class as reference
 
       if(alert) {
          alert.remove();
@@ -103,8 +105,3 @@ document.addEventListener('DOMContentLoaded', () => {
       return result;
    }
 });
-
-/* TODO: Pay attention to what is the parent element of my fields 👀👀
-- Las alertas por cada field deben ir debajo de cada field, como hijo
-usando appendChild.
-*/
