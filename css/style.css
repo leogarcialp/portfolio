@@ -1,6 +1,7 @@
 :root {
    --primary: #191a1d;
    --secondary: #4B6CC1;
+   --tertiary: #ff9999;
    --neutral1: #83858C;
    --neutral2: #ABABAB;
    --neutral3: #FAFAFA;
@@ -66,6 +67,21 @@ h2 {
    display: flex;
    justify-content: flex-end;
 }
+
+/* Alert styles */
+.bg-alert {
+   background-color: #ff0000;
+}
+
+.p-alert {
+   padding: 1rem;
+}
+
+.text-center-alert {
+   text-align: center;
+}
+
+
 /* *-*-*-*-*-*-*-*-*-*-*-*-*- */
 
 
