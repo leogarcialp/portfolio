@@ -68,8 +68,40 @@ document.addEventListener('DOMContentLoaded', () => {
          showAlert(`The field ${e.target.id} is required`, e.target.parentElement);
          return;
       }
+
+      if(e.target.id === 'email' && !validateEmail(e.target.value)) {
+         mostrarAlerta('the email is not valid', e.target.parentElement);
+         return;
+      }
+
+      removeAlert(e.target.parentElement);
    }
 
+   function showAlert(message, reference) {
+      // Generate alert
+      const error = document.createElement('P');
+      error.textContent = message;
+      // error.classList.add('');
+
+      // Show created element in the HTML
+      reference.appendChild(error);
+   }
+
+   function removeAlert(reference) {
+      // Comprueba si ya existe una alerta
+      const alert = reference.querySelector('.bg-red-600'); //add a list a reference
+
+      if(alert) {
+         alert.remove();
+      }
+   }
+
+   function validateEmail(email) {
+      const regex =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+      const result = regex.test(email);
+
+      return result;
+   }
 });
 
 /* TODO: Pay attention to what is the parent element of my fields 👀👀
