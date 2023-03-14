@@ -63,6 +63,20 @@ h2 {
    border-radius: 3rem;
 }
 
+/* Disabled btn */
+.opacity-50 {
+   opacity: 0.5;
+}
+
+/* disabled cursor or not */
+.cursor-not-allowed {
+   cursor: not-allowed;
+}
+
+.cursor-pointer {
+   cursor: pointer;
+}
+
 .flex-right {
    display: flex;
    justify-content: flex-end;
@@ -620,7 +634,7 @@ fieldset > div {
 
 .contact__submit:hover {
    transform: scale(1.1);
-   cursor: pointer;
+   /* cursor: pointer; */
 }
 
 /* contact Media Queries */
