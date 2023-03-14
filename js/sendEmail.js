@@ -30,24 +30,16 @@
 
 
 /*TODO: 
-- install Tailwind
-- Disable send message button ❌
-- validate the form fields
-- Enable send message button ✅
-- hardest part would be showing the error messages below the form (I have to
-   create and design new CSS elements 💡👀)
-- Clean/reset fields when message sent  
+Validar el envio del email cuando los 3 campos
+sean correctos
+
+- Boton de enviar DISABLED y opacidad 50 (hacerlo en el HTML)
+- Nombre NO debe estar vacio
+- Email NO debe estare vacio y debe ser formato email
+- Mensaje NO debe estar vacio
+- ACTIVAR BOTON DE ENVIO
+- Limpiar campos
 */
-
-
-/*
-logic proposal:
-
-- Disable send Message button at the beginning.  Use → (DOMContentLoaded) 
-- Validate fields and then enable SendMessage button
-- Design/adapt error messages according to the page
-*/
-
 
 // Logic based on a project
 
