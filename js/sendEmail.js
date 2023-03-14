@@ -1,48 +1,3 @@
-// const btnSend = document.querySelector('.contact__submit');
-
-// // disable Send button
-// btnSend.disabled = true;
-// btnSend.classList.add('cursor-not-allowed', 'opacity-50', 'bg-blue-500');
-
-// // Validate form fields
-
-
-
-
-// document.querySelector('.contact__form').addEventListener('submit', function(event) {
-//    event.preventDefault();
-
-//    btnSend.value = 'Sending...';
-
-//    const serviceID = 'default_service';
-//    const templateID = 'template_hpfiyhf';
-
-//    emailjs.sendForm(serviceID, templateID, this)
-//    .then(() => {
-//          btnSend.value = 'Send Message';
-//          alert('Email Sent!');
-//       }, (err) => {
-//          btnSend.value = 'Send Message';
-//          alert(JSON.stringify(err));
-//       }
-//    );
-// });
-
-
-/*TODO: 
-Validar el envio del email cuando los 3 campos
-sean correctos
-
-- Boton de enviar DISABLED y opacidad 50 (hacerlo en el HTML)
-- Nombre NO debe estar vacio
-- Email NO debe estare vacio y debe ser formato email
-- Mensaje NO debe estar vacio
-- ACTIVAR BOTON DE ENVIO
-- Limpiar campos
-*/
-
-// Logic based on a project
-
 document.addEventListener('DOMContentLoaded', () => {
    // Object to evaluate all fields
    const infoInputs = {
@@ -59,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
    const form = document.querySelector('.contact__form');
 
    // Events
-   inputName.addEventListener('blur', validate);
-   inputEmail.addEventListener('blur', validate);
-   inputMessage.addEventListener('blur', validate);
+   inputName.addEventListener('input', validate);
+   inputEmail.addEventListener('input', validate);
+   inputMessage.addEventListener('input', validate);
    
    // Send email event
    form.addEventListener('submit', function(event) {
@@ -76,6 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(() => {
             btnSend.value = 'Send Message';
             alert('Email Sent!');
+
+            // Reset fields values and object
+            infoInputs.name = '';
+            infoInputs.email = '';
+            infoInputs.message = '';
+
+            form.reset();
+            verifyAllFields();
+
          }, (err) => {
             btnSend.value = 'Send Message';
             alert(JSON.stringify(err));
