@@ -52,15 +52,38 @@ document.addEventListener('DOMContentLoaded', () => {
    };
 
    // Elements
-   inputName = document.querySelector('#name');
-   inputEmail = document.querySelector('#email');
-   inputMessage = document.querySelector('#message');
-   btnSend = document.querySelector('.contact__submit');
+   const inputName = document.querySelector('#name');
+   const inputEmail = document.querySelector('#email');
+   const inputMessage = document.querySelector('#message');
+   const btnSend = document.querySelector('.contact__submit');
+   const form = document.querySelector('.contact__form');
 
    // Events
    inputName.addEventListener('blur', validate);
    inputEmail.addEventListener('blur', validate);
    inputMessage.addEventListener('blur', validate);
+   
+   // Send email event
+   form.addEventListener('submit', function(event) {
+      event.preventDefault();
+   
+      btnSend.value = 'Sending...';
+   
+      const serviceID = 'default_service';
+      const templateID = 'template_hpfiyhf';
+   
+      emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+            btnSend.value = 'Send Message';
+            alert('Email Sent!');
+         }, (err) => {
+            btnSend.value = 'Send Message';
+            alert(JSON.stringify(err));
+         }
+      );
+   });
+
+
 
    // Functions
    function validate(e) {
