@@ -44,10 +44,18 @@ sean correctos
 // Logic based on a project
 
 document.addEventListener('DOMContentLoaded', () => {
+   // Object to evaluate all fields
+   const infoInputs = {
+      name: '',
+      email: '',
+      message: ''
+   };
+
    // Elements
    inputName = document.querySelector('#name');
    inputEmail = document.querySelector('#email');
    inputMessage = document.querySelector('#message');
+   btnSend = document.querySelector('.contact__submit');
 
    // Events
    inputName.addEventListener('blur', validate);
@@ -58,15 +66,24 @@ document.addEventListener('DOMContentLoaded', () => {
    function validate(e) {
       if(e.target.value.trim() === '') {
          showAlert(`The field ${e.target.id} is required`, e.target.parentElement);
+         infoInputs[e.target.name] = '';
+         verifyAllFields();
          return;
       }
 
       if(e.target.id === 'email' && !validateEmail(e.target.value)) {
          showAlert('The email is not valid', e.target.parentElement);
+         infoInputs[e.target.name] = '';
+         verifyAllFields();
          return;
       }
 
       removeAlert(e.target.parentElement);
+
+      // Mapping inputs information to the object 
+      infoInputs[e.target.name] = e.target.value.trim().toLowerCase();
+
+      verifyAllFields();
    }
 
    function showAlert(message, reference) {
@@ -95,5 +112,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const result = regex.test(email);
 
       return result;
+   }
+
+   function verifyAllFields() {
+      console.log(infoInputs);
+
+      if(Object.values(infoInputs).includes('')) {
+         btnSend.classList.add('opacity-50', 'cursor-not-allowed');
+         btnSend.classList.remove('cursor-pointer');
+         btnSend.disabled = true;
+      } else {
+         btnSend.classList.remove('opacity-50', 'cursor-not-allowed');
+         btnSend.classList.add('cursor-pointer');
+         btnSend.disabled = false;
+      }
    }
 });
