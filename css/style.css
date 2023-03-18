@@ -654,7 +654,11 @@ fieldset > div {
    color: white;
    text-align: center;
 }
-/* Year must be dynamic ↑ */
+
+.footer_link {
+   color: #ffe845;
+   text-decoration: none;
+}
 
 @media (max-width: 768px) {
    .footer {
