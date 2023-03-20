@@ -365,7 +365,7 @@ h2 {
 /* ---------------- */
 /* SKILLS  SECTION */
 .skills {
-   background-color: #ffe7e7;
+   background-color: var(--neutral3);
    color: var(--primary);
 }
 
@@ -384,6 +384,10 @@ h2 {
    margin-top: 10rem;
    padding-bottom: 5rem;
    text-align: center;
+}
+
+.skills__name {
+   font-weight: 600;
 }
 
 .skills__container svg:hover {
