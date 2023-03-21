@@ -377,7 +377,7 @@ h2 {
 
 .skills__container {
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
    grid-template-rows: auto auto auto;
    gap: 2rem;
    justify-items: center;
@@ -394,6 +394,19 @@ h2 {
    transform: scale(2);
    transition: .3s;
 }
+
+@media (max-width: 768px) {
+   .skills__container {
+      grid-template-columns: 1fr 1fr;
+   }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+   .skills__container {
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+}
+
 
 /* ---------------- */
 /* ABOUT ME SECTION */
