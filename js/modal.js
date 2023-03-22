@@ -13,7 +13,7 @@ const info = [
       desc: 'My portfolio made from scratch using HTML5, CSS3 and JavaScript. My first big project.',
       techUsed: 'HTML - CSS - JavaScript',
       projectCode: 'https://github.com/leogarcialp/portfolio',
-      projectDemo: 'https://portfolio-leogarcialp.vercel.app/',
+      projectDemo: 'https://leogarcialp.com',
    },
 
    {
@@ -77,7 +77,7 @@ for(let i = 0; i < info.length; i++) {
    infoProject.classList.add('main__project');
 
    infoProject.innerHTML = `<div class="main__project-img ${currentItem.img}">
-         <button class="btn-project open-modal-btn">View description</button>
+         <button class="btn-project__modal">Open description</button>
    </div>
    <div class="main__project-info">
       <div class="main__project-header">
@@ -104,7 +104,7 @@ for(let i = 0; i < info.length; i++) {
          <div class="modal-body">
          ${currentItem.desc}
          </div>
-         <button class="btn-project close-modal">close modal</button>
+         <button class="btn-project close-modal">Close description</button>
       </div>
    </div> <!--modal-->`
    ;
@@ -117,7 +117,7 @@ for(let i = 0; i < info.length; i++) {
 
 // Open and close modal
 const modal = document.querySelectorAll('.modal-overlay');
-const openModalBtn = document.querySelectorAll('.open-modal-btn');
+const openModalBtn = document.querySelectorAll('.btn-project__modal');
 const closeModalBtn = document.querySelectorAll('.close-modal');
 
 
