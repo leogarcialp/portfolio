@@ -503,18 +503,21 @@ h2 {
    border-radius: 2rem;
    box-shadow: 5px 5px 8px 0px #ababab3b;
    overflow: hidden;
+   background-color: #ffffff;
 }
 
 .main__project-img {
    position: relative;
    height: 60%;
-   background-color: violet;
+   background-color: violet;  /*visual help in case img doesn't load */
    background-repeat: no-repeat;
    background-size: cover;
+   transition: 0.3s;
 }
 
 .main__project-img:hover {
    opacity: 0.8;
+   transform: scale(1.1);
 }
 
 /* show modal button when hover img */
@@ -586,13 +589,19 @@ h2 {
    background: var(--neutral3);
    border-radius: var(--radius);
    width: 70vw;
-   height: 50vh;
+   min-height: 50vh;
    padding: 3rem;
    /* max-width: var(--fixed-width); */
    text-align: center;
    display: grid;
    place-items: center;
    position: relative;
+}
+
+@media (max-width: 767px) {
+   .modal-container {
+      width: 90vw;
+   }
 }
 
 .modal-body {
