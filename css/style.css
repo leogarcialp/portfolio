@@ -497,8 +497,10 @@ h2 {
 
 /* cards styles */
 .main__project {
+   display: grid;
+   grid-template-rows: 1.5fr 1fr;
    width: 100%;
-   height: 33rem;
+   min-height: 33rem;
    border: 1px solid #ababab3b;
    border-radius: 2rem;
    box-shadow: 5px 5px 8px 0px #ababab3b;
@@ -508,7 +510,6 @@ h2 {
 
 .main__project-img {
    position: relative;
-   height: 60%;
    background-color: violet;  /*visual help in case img doesn't load */
    background-repeat: no-repeat;
    background-size: cover;
@@ -549,6 +550,11 @@ h2 {
 .main__project-body {
    font-size: 1.5rem;
    color: var(--neutral1);
+   padding: 1rem 1rem 1rem 0;
+}
+
+.main__project-body p {
+   margin: 0;
 }
 
 .btn-project:hover {
@@ -562,8 +568,7 @@ h2 {
 }
 
 .main__project-info {
-   margin-top: 1rem;
-   padding-left: 1rem;
+   padding: 1rem;
 }
 
 .main__project-footer > :first-child {
