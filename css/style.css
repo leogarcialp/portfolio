@@ -568,6 +568,9 @@ h2 {
 }
 
 .main__project-info {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
    padding: 1rem;
 }
 
